@@ -5,16 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Captive Portal</title>
 <style>
+
+body {
+  background-image: url('Background_1.jpg');
+  background-attachment:fixed;
+  background-position:center 50%;
+}
+
 * {
   box-sizing: border-box;
-}
-
-.logo{
-  text-align: center;
-}
-
-#logo_image{
-  width: 30%;
 }
 
 .vid{
@@ -25,13 +24,32 @@
   text-align: center;
 }
 
-.slice_logo{
+.logo{
   text-align: center;
-  position: relative;
+}
+
+#welcome{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25pt;
+  color: #197894;
+}
+
+#asbury{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  font-size: 50pt;
+  color: #197894;
+}
+
+#park{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  font-size: 50pt;
+  color: #197894;
 }
 
 #some-button {
-  background-color: #111827;
+  background-color: #0392ea;
   border: 1px solid transparent;
   border-radius: .75rem;
   box-sizing: border-box;
@@ -83,12 +101,6 @@
     font-size: 2rem;
 }
 
-
-#power_by{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: x-large;
-}
-
 @media only screen and (max-width: 1000px) {
   #logo_image{
     width: 60%;
@@ -97,12 +109,15 @@
     width: 100%;
     height: auto;
   }
-  #slice{
-    width: 30%;
+  .vid{
+    width: 100%;
   }
-  #power_by{
-  font-size:large;
-}
+  .countdown_text{
+    width: 100%;
+  }
+  #some-button{
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -113,12 +128,12 @@
     width: 100%;
     height: auto;
   }
-  #slice{
-    width: 30%;
+  .vid{
+    width: 100%;
   }
-  #power_by{
-  font-size:small;
-}
+  .countdown_text{
+    width: 100%;
+  }
 }
 
 </style>
@@ -126,11 +141,16 @@
 </head>
 
 <body>
+    <br>
+    <br>
+    <br>
     <div class = "main">
       <!-- logo for the client 
       if change is needed change the src -->
       <div class = "logo">
-        <img id = "logo_image" src = "APBroadwalk.png">
+        <div id = 'welcome'>Welcome to</div>
+        <div id = 'asbury'>ASBURY</div>
+        <div id = 'park'>PARK</div>
       </div>
 
       <!-- video for the advertiser 
@@ -155,22 +175,13 @@
       </div>
 
       <br>
+      <br>
       <!-- hidden connect button plus countdown text -->
       <!-- to change timer count
       change the variable count in the timer.js file -->
       <div class = "countdown_text">
-          <button id="some-button">Connect</button>
+          <button id="some-button">CONNECT TO FREE WIFI</button>
       </div>
-
-      <br>
-      <div class = "wrapper">
-        <!-- slice logo -->
-      <div class = "slice_logo">
-        <span id = 'power_by'> POWERED BY: </span>
-        <img id = "slice" width="10%" height="auto" src = "Slice-Logo.gif">
-      </div>
-      </div>
-      
     </div>
 </body>
 </html>
